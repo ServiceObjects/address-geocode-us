@@ -20,7 +20,7 @@ The operation output is designed to allow the service to return new pieces of da
 
 ```
 // 1 Instantiate the service wrapper
- var agus = new GetBestMatchV4(isLive);
+GetBestMatchV4Validation getBestMatchV4Validation = new(true);
 
 // 2 Provide your input data
 //  Required fields:
@@ -33,14 +33,12 @@ The operation output is designed to allow the service to return new pieces of da
 // Optional:
 //        Address
 //        TimeoutSeconds (default: 15)
-
-// 3 Call the service
 string Adress = "136 W Canon Perdido St Ste D";
 string City = "Santa Barbara";
 string State = "CA";
 string PostalCode = "93101";
 
-GetBestMatchV4Validation getBestMatchV4Validation = new(isLive);
+// 3 Call the service
 Location_V4 response = getBestMatchV4Validation.GetBestMatchV4(Adress, City, State, PostalCode, licenseKey).Result;
 
 // 4. Inspect results.
@@ -86,7 +84,7 @@ Returns an estimated distance from a given latitude and longitude to the nearest
 
 ```
 // 1 Instantiate the service wrapper
- var agus = new GetDistanceToWater(isLive);
+GetDistanceToWaterValidation getDistanceToWaterValidation = new(true);
 
 // 2 Provide your input data
 //  Required fields:
@@ -97,12 +95,10 @@ Returns an estimated distance from a given latitude and longitude to the nearest
 // 
 // Optional:
 //        TimeoutSeconds (default: 15)
-
-// 3 Call the service
 string Latitude = "34.419120";
 string Longitude = "-119.703421";
 
-GetDistanceToWaterValidation getDistanceToWaterValidation = new(isLive);
+// 3 Call the service
 DistanceToWaterInfo response = getDistanceToWaterValidation.GetDistanceToWater(Latitude, Longitude, licenseKey).Result;
 
 // 4. Inspect results.
@@ -134,7 +130,7 @@ Returns an estimated address for a given latitude and longitude.
 
 ```
 // 1 Instantiate the service wrapper
- var agus = new GetReverseLocation(isLive);
+GetReverseLocationValidation getReverseLocationValidation = new(true);
 
 // 2 Provide your input data
 //  Required fields:
@@ -145,12 +141,10 @@ Returns an estimated address for a given latitude and longitude.
 // 
 // Optional:
 //        TimeoutSeconds (default: 15)
-
-// 3 Call the service
 string latitude = "34.419061";
 string longitude = "-119.702139";
 
-GetReverseLocationValidation getReverseLocationValidation = new(isLive);
+// 3 Call the service
 ReverseAddress response = getReverseLocationValidation.GetReverseLocation(latitude, longitude, licenseKey).Result;
 
 // 4. Inspect results.
