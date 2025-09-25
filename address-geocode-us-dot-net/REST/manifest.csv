@@ -1,0 +1,7 @@
+Filename,RawURL
+AGUSResponse.cs,https://raw.githubusercontent.com/ServiceObjects/address-geocode-us/master/address-geocode-us-dot-net/REST/AGUSResponse.cs
+GetBestMatchV4.cs,https://raw.githubusercontent.com/ServiceObjects/address-geocode-us/master/address-geocode-us-dot-net/REST/GetBestMatchV4.cs
+GetDistanceToWater.cs,https://raw.githubusercontent.com/ServiceObjects/address-geocode-us/master/address-geocode-us-dot-net/REST/GetDistanceToWater.cs
+GetReverseLocation.cs,https://raw.githubusercontent.com/ServiceObjects/address-geocode-us/master/address-geocode-us-dot-net/REST/GetReverseLocation.cs
+Helper.cs,https://raw.githubusercontent.com/ServiceObjects/address-geocode-us/master/address-geocode-us-dot-net/REST/Helper.cs
+readme.md,https://raw.githubusercontent.com/ServiceObjects/address-geocode-us/master/address-geocode-us-dot-net/REST/readme.md
