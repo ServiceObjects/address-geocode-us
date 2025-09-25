@@ -1,0 +1,6 @@
+Filename,RawURL
+agus_response.js,https://raw.githubusercontent.com/ServiceObjects/address-geocode-us/master/address-geocode-us-nodejs/REST/agus_response.js
+get_best_match_v4_rest.js,https://raw.githubusercontent.com/ServiceObjects/address-geocode-us/master/address-geocode-us-nodejs/REST/get_best_match_v4_rest.js
+get_distance_to_water_rest.js,https://raw.githubusercontent.com/ServiceObjects/address-geocode-us/master/address-geocode-us-nodejs/REST/get_distance_to_water_rest.js
+get_reverse_location_rest.js,https://raw.githubusercontent.com/ServiceObjects/address-geocode-us/master/address-geocode-us-nodejs/REST/get_reverse_location_rest.js
+readme.md,https://raw.githubusercontent.com/ServiceObjects/address-geocode-us/master/address-geocode-us-nodejs/REST/readme.md
