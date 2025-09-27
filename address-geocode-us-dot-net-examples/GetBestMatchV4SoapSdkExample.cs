@@ -5,7 +5,7 @@ namespace address_geocode_us_dot_net_examples
 {
     public static class GetBestMatchV4SoapSdkExample
     {
-        public static void Go(string licenseKey, bool isLive)
+        public static void Go(string LicenseKey, bool IsLive)
         {
             Console.WriteLine("\r\n----------------------------------------------");
             Console.WriteLine("Address Geocode US - GetBestMatchV4 - SOAP SDK");
@@ -21,12 +21,12 @@ namespace address_geocode_us_dot_net_examples
             Console.WriteLine($"City         : {City}");
             Console.WriteLine($"State        : {State}");
             Console.WriteLine($"Postal Code  : {PostalCode}");
-            Console.WriteLine($"License Key  : {licenseKey}");
-            Console.WriteLine($"Is Live      : {isLive}");
+            Console.WriteLine($"License Key  : {LicenseKey}");
+            Console.WriteLine($"Is Live      : {IsLive}");
 
-            GetBestMatchV4Validation getBestMatchV4Validation = new(isLive);
+            GetBestMatchV4Validation getBestMatchV4Validation = new(IsLive);
 
-            Location_V4 response = getBestMatchV4Validation.GetBestMatchV4(Adress, City, State, PostalCode, licenseKey).Result;
+            Location_V4 response = getBestMatchV4Validation.GetBestMatchV4(Adress, City, State, PostalCode, LicenseKey).Result;
 
             if (response.Error is null)
             {

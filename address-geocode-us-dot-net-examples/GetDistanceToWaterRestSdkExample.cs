@@ -1,10 +1,11 @@
 ﻿using address_geocode_us_dot_net.REST;
+using System.ComponentModel;
 
 namespace address_geocode_us_dot_net_examples
 {
     public class GetDistanceToWaterRestSdkExample
     {
-        public static void Go(string licenseKey, bool isLive)
+        public static void Go(string LicenseKey, bool IsLive)
         {
             Console.WriteLine("\r\n--------------------------------------------------");
             Console.WriteLine("Address Geocode US - GetDistanceToWater - REST SDK");
@@ -13,8 +14,8 @@ namespace address_geocode_us_dot_net_examples
             GetDistanceToWaterClient.GetDistanceToWaterInput getDistanceToWaterInput = new(
                 Latitude: "34.419120",
                 Longitude: "-119.703421",
-                LicenseKey: licenseKey,
-                IsLive: isLive,
+                LicenseKey: LicenseKey,
+                IsLive: IsLive,
                 TimeoutSeconds: 15
             );
 

@@ -1,10 +1,11 @@
 ﻿using address_geocode_us_dot_net.REST;
+using System.ComponentModel;
 
 namespace address_geocode_us_dot_net_examples
 {
     public static class GetReverseLocationRestSdkExample
     {
-        public static void Go(string licenseKey, bool isLive)
+        public static void Go(string LicenseKey, bool IsLive)
         {
             Console.WriteLine("\r\n--------------------------------------------------");
             Console.WriteLine("Address Geocode US - GetReverseLocation - REST SDK");
@@ -13,8 +14,8 @@ namespace address_geocode_us_dot_net_examples
             GetReverseLocationClient.GetReverseLocationInput getReverseLocationInput = new(
                 Latitude: "34.419061",
                 Longitude: "-119.702139",
-                LicenseKey: licenseKey,
-                IsLive: isLive,
+                LicenseKey: LicenseKey,
+                IsLive: IsLive,
                 TimeoutSeconds: 15
             );
 

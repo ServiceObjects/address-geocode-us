@@ -5,23 +5,23 @@ namespace address_geocode_us_dot_net_examples
 {
     public static class GetReverseLocationSoapSdkExample
     {
-        public static void Go(string licenseKey, bool isLive)
+        public static void Go(string LicenseKey, bool IsLive)
         {
             Console.WriteLine("\r\n--------------------------------------------------");
             Console.WriteLine("Address Geocode US - GetReverseLocation - SOAP SDK");
             Console.WriteLine("--------------------------------------------------");
 
-            string latitude = "34.419061";
-            string longitude = "-119.702139";
+            string Latitude = "34.419061";
+            string Longitude = "-119.702139";
 
             Console.WriteLine("\r\n* Input *\r\n");
-            Console.WriteLine($"Latitude    : {latitude}");
-            Console.WriteLine($"Longitude   : {longitude}");
-            Console.WriteLine($"License Key : {licenseKey}");
-            Console.WriteLine($"Is Live     : {isLive}");
+            Console.WriteLine($"Latitude    : {Latitude}");
+            Console.WriteLine($"Longitude   : {Longitude}");
+            Console.WriteLine($"License Key : {LicenseKey}");
+            Console.WriteLine($"Is Live     : {IsLive}");
 
-            GetReverseLocationValidation getReverseLocationValidation = new(isLive);
-            ReverseAddress response = getReverseLocationValidation.GetReverseLocation(latitude, longitude, licenseKey).Result;
+            GetReverseLocationValidation getReverseLocationValidation = new(IsLive);
+            ReverseAddress response = getReverseLocationValidation.GetReverseLocation(Latitude, Longitude, LicenseKey).Result;
             
             if (response.Error is null)
             {

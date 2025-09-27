@@ -4,7 +4,7 @@ namespace address_geocode_us_dot_net_examples
 {
     public  class GetBestMatchV4RestSdkExample
     {
-        public static void Go(string licenseKey, bool isLive)
+        public static void Go(string LicenseKey, bool IsLive)
         {
             Console.WriteLine("\r\n----------------------------------------------");
             Console.WriteLine("Address Geocode US - GetBestMatchV4 - REST SDK");
@@ -15,8 +15,8 @@ namespace address_geocode_us_dot_net_examples
                 City: "Santa Barbara",
                 State: "CA",
                 PostalCode: "93101",
-                LicenseKey: licenseKey,
-                IsLive: isLive,
+                LicenseKey: LicenseKey,
+                IsLive: IsLive,
                 TimeoutSeconds: 15
             );
 
