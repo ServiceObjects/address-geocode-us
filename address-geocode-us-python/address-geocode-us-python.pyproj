@@ -28,11 +28,13 @@
     <Folder Include="SOAP\__pycache__\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="REST\manifest.csv" />
     <Content Include="REST\readme.md" />
     <Content Include="REST\__pycache__\agus_response.cpython-313.pyc" />
     <Content Include="REST\__pycache__\get_best_match_v4_rest.cpython-313.pyc" />
     <Content Include="REST\__pycache__\get_distance_to_water_rest.cpython-313.pyc" />
     <Content Include="REST\__pycache__\get_reverse_location_rest.cpython-313.pyc" />
+    <Content Include="SOAP\manifest.csv" />
     <Content Include="SOAP\readme.md" />
     <Content Include="SOAP\__pycache__\get_best_match_v4_soap.cpython-313.pyc" />
     <Content Include="SOAP\__pycache__\get_distance_to_water_soap.cpython-313.pyc" />

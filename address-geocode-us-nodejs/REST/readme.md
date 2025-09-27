@@ -22,15 +22,15 @@ The operation output is designed to allow the service to return new pieces of da
 // 1. Build the input
 //
 //  Required fields:
-//               City 
-//               State
-//               PostalCode
-//               LicenseKey
-//               IsLive
+//               address
+//               city 
+//               state
+//               postalCode
+//               licenseKey
+//               isLive
 // 
 // Optional:
-//        Address
-//        TimeoutSeconds (default: 15)
+//        timeoutSeconds
 
 import { GetBestMatchV4Client } from "../address-geocode-us-nodejs/REST/get_best_match_v4_rest.js";
 
@@ -39,6 +39,8 @@ const city = "Santa Barbara";
 const state = "CA";
 const postalCode = "93101";
 const timeoutSeconds = 15;
+const isLive = true;
+const licenseKey = "YOUR LICENSE KEY";
 
 // 2. Call the sync InvokeAsync() method.
 const response = await GetBestMatchV4Client.invoke(
@@ -93,19 +95,21 @@ Returns an estimated distance from a given latitude and longitude to the nearest
 // 1. Build the input
 //
 //  Required fields:
-//               Latitude
-//               Longitude
-//               LicenseKey
-//               IsLive
+//               latitude
+//               longitude
+//               licenseKey
+//               isLive
 // 
 // Optional:
-//        TimeoutSeconds (default: 15)
+//        timeoutSeconds
 
 import { GetDistanceToWaterClient } from "../address-geocode-us-nodejs/REST/get_distance_to_water_rest.js";
 
 const latitude = "34.419120";
 const longitude = "-119.703421";
 const timeoutSeconds = 15;
+const isLive = true;
+const licenseKey = "YOUR LICENSE KEY";
 
 // 2. Call the sync InvokeAsync() method.
 const response = await GetDistanceToWaterClient.invoke(
@@ -148,19 +152,21 @@ Returns an estimated address for a given latitude and longitude.
 // 1. Build the input
 //
 //  Required fields:
-//               Latitude
-//               Longitude
-//               LicenseKey
-//               IsLive
+//               latitude
+//               longitude
+//               licenseKey
+//               isLive
 // 
 // Optional:
-//        TimeoutSeconds (default: 15)
+//        timeoutSeconds
 
 import { GetReverseLocationClient } from "../address-geocode-us-nodejs/REST/get_reverse_location_rest.js";
 
 const latitude = "34.419120";
 const longitude = "-119.703421";
 const timeoutSeconds = 15;
+const isLive = true;
+const licenseKey = "YOUR LICENSE KEY";
 
 // 2. Call the sync InvokeAsync() method.
 const response = await GetReverseLocationClient.invoke(

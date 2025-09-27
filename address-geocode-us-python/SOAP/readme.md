@@ -21,16 +21,16 @@ The operation output is designed to allow the service to return new pieces of da
 ```
 # 1. Build the input
 #
-#  Required fields:
-#               City 
-#               State
-#               PostalCode
-#               LicenseKey
-#               IsLive
+# Required fields:
+#               address
+#               city 
+#               state
+#               postal_code
+#               license_key
+#               is_live
 # 
 # Optional:
-#        Address
-#        TimeoutSeconds (default: 15)
+#        timeout_seconds
 
 from get_best_match_v4_rest import get_best_match_v4
 
@@ -39,6 +39,8 @@ city = "Santa Barbara"
 state = "CA"
 postal_code = "93101"
 timeout_seconds = 15
+is_live = True
+license_key = "YOUR LICENSE KEY"
 
 # 2. Call the method.
 service = GetBestMatchV4Soap(address, city, state, postal_code, license_key, is_live, timeout_seconds)
@@ -81,22 +83,24 @@ Returns an estimated distance from a given latitude and longitude to the nearest
 # 1. Build the input
 #
 #  Required fields:
-#               Latitude
-#               Longitude
-#               LicenseKey
-#               IsLive
+#               latitude
+#               longitude
+#               license_key
+#               is_live
 # 
 # Optional:
-#        TimeoutSeconds (default: 15)
+#        timeout_seconds
 
 from get_distance_to_water_rest import get_distance_to_water
 
 latitude = "34.419120"
 longitude = "-119.703421"
 timeout_seconds = 15
+is_live = True
+license_key = "YOUR LICENSE KEY"
 
 # 2. Call the sync InvokeAsync() method.
-service = GetDistanceToWaterSoap(latitude,longitude,license_key,is_live,timeout_seconds)
+service = GetDistanceToWaterSoap(latitude, longitude, license_key, is_live, timeout_seconds)
 response = service.get_distance_to_water()
 
 # 3. Inspect results.
@@ -128,22 +132,24 @@ Returns an estimated address for a given latitude and longitude.
 # 1. Build the input
 #
 #  Required fields:
-#               Latitude
-#               Longitude
-#               LicenseKey
-#               IsLive
+#               latitude
+#               longitude
+#               license_key
+#               is_live
 # 
 # Optional:
-#        TimeoutSeconds (default: 15)
+#        timeout_seconds
 
 from get_reverse_location_rest import get_reverse_location
 
 latitude = "34.419120"
 longitude = "-119.703421"
 timeout_seconds = 15
+is_live = True
+license_key = "YOUR LICENSE KEY"
 
 # 2. Call the sync InvokeAsync() method.
-service = GetReverseLocationSoap(latitude,longitude,license_key,is_live,timeout_seconds)
+service = GetReverseLocationSoap(latitude, longitude, license_key, is_live, timeout_seconds)
 response = service.get_reverse_location()
 
 # 3. Inspect results.

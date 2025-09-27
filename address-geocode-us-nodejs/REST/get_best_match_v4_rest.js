@@ -7,21 +7,21 @@ import { GetBestMatchV4Response } from './agus_response.js';
  * @type {string}
  * @description The base URL for the live ServiceObjects Address Geocode US (AGUS) API service.
  */
-const LiveBaseUrl = 'https://sws.serviceobjects.com/GCR/api.svc/json/';
+const liveBaseUrl = 'https://sws.serviceobjects.com/GCR/api.svc/json/';
 
 /**
  * @constant
  * @type {string}
  * @description The base URL for the backup ServiceObjects Address Geocode US (AGUS) API service.
  */
-const BackupBaseUrl = 'https://swsbackup.serviceobjects.com/GCR/api.svc/json/';
+const backupBaseUrl = 'https://swsbackup.serviceobjects.com/GCR/api.svc/json/';
 
 /**
  * @constant
  * @type {string}
  * @description The base URL for the trial ServiceObjects Address Geocode US (AGUS) API service.
  */
-const TrialBaseUrl = 'https://trial.serviceobjects.com/GCR/api.svc/json/';
+const trialBaseUrl = 'https://trial.serviceobjects.com/GCR/api.svc/json/';
 
 /**
  * <summary>
@@ -93,11 +93,11 @@ const GetBestMatchV4Client = {
             LicenseKey
         };
 
-        const url = buildUrl(params, isLive ? LiveBaseUrl : TrialBaseUrl);
+        const url = buildUrl(params, isLive ? liveBaseUrl : trialBaseUrl);
         let response = await httpGet(url, timeoutSeconds);
 
         if (isLive && !isValid(response)) {
-            const fallbackUrl = buildUrl(params, BackupBaseUrl);
+            const fallbackUrl = buildUrl(params, backupBaseUrl);
             const fallbackResponse = await httpGet(fallbackUrl, timeoutSeconds);
             return fallbackResponse;
         }

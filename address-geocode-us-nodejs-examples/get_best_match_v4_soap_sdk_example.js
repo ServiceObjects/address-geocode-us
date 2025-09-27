@@ -35,9 +35,11 @@ async function GetBestMatchV4SoapGo(licenseKey, isLive) {
             console.log(`Zip              : ${response.Zip}`);
 
             console.log("\n* Information Components *\n");
-            if (response?.InformationComponents.length > 0)
+            if (response?.InformationComponents.InformationComponent.length > 0)
             {
-                response.InformationComponents.forEach((component, index) => {
+                const raw = response?.InformationComponents?.InformationComponent;
+                const components = Array.from(raw ?? []);
+                components.forEach((component, index) => {
                     console.log(`${component.Name}: ${component.Value}`);
                 });
             }

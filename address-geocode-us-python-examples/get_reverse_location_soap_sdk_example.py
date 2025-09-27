@@ -22,7 +22,7 @@ def get_reverse_location_soap_sdk_go(is_live: bool, license_key: str) -> None:
     print(f"Timeout Seconds : {timeout_seconds}")
 
     try:
-        service = GetReverseLocationSoap(latitude,longitude,license_key,is_live,timeout_seconds)
+        service = GetReverseLocationSoap(latitude, longitude, license_key, is_live, timeout_seconds)
         response = service.get_reverse_location()
 
         if response and not hasattr(response, "Error"):

@@ -21,22 +21,22 @@ The operation output is designed to allow the service to return new pieces of da
 ```
 # 1. Build the input
 #
-#  Required fields:
-#               City 
-#               State
-#               PostalCode
-#               LicenseKey
-#               IsLive
-# 
-# Optional:
-#        Address
+# Required fields:
+#               address
+#               city 
+#               state
+#               postal_code
+#               license_key
+#               is_live
+
+from get_best_match_v4_soap import GetBestMatchV4Soap
 
 address = "136 W Canon Perdido St Ste D"
 city = "Santa Barbara"
 state = "CA"
 postal_code = "93101"
-
-from get_best_match_v4_soap import GetBestMatchV4Soap
+is_live = True
+license_key = "YOUR LICENSE KEY"
 
 # 2. Call the method.
 response = get_best_match_v4(address, city, state, postal_code, license_key, is_live)
@@ -78,15 +78,17 @@ Returns an estimated distance from a given latitude and longitude to the nearest
 # 1. Build the input
 #
 #  Required fields:
-#               Latitude
-#               Longitude
-#               LicenseKey
-#               IsLive
+#               latitude
+#               longitude
+#               license_key
+#               is_live
 
 from get_distance_to_water_soap import GetDistanceToWaterSoap
 
 latitude = "34.419120"
 longitude = "-119.703421"
+is_live = True
+license_key = "YOUR LICENSE KEY"
 
 # 2. Call the sync InvokeAsync() method.
 response = get_distance_to_water(latitude, longitude, license_key, is_live)
@@ -120,15 +122,17 @@ Returns an estimated address for a given latitude and longitude.
 # 1. Build the input
 #
 #  Required fields:
-#               Latitude
-#               Longitude
-#               LicenseKey
-#               IsLive
+#               latitude
+#               longitude
+#               license_key
+#               is_live
 
 from get_reverse_location_soap import GetReverseLocationSoap
 
 latitude = "34.419120"
 longitude = "-119.703421"
+is_live = True
+license_key = "YOUR LICENSE KEY"
 
 # 2. Call the sync InvokeAsync() method.
 response = get_reverse_location(latitude, longitude, license_key, is_live)

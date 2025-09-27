@@ -1,5 +1,4 @@
 Filename,RawURL
-agus_response.js,https://raw.githubusercontent.com/ServiceObjects/address-geocode-us/master/address-geocode-us-nodejs/SOAP/agus_response.js
 get_best_match_v4_soap.js,https://raw.githubusercontent.com/ServiceObjects/address-geocode-us/master/address-geocode-us-nodejs/SOAP/get_best_match_v4_soap.js
 get_distance_to_water_soap.js,https://raw.githubusercontent.com/ServiceObjects/address-geocode-us/master/address-geocode-us-nodejs/SOAP/get_distance_to_water_soap.js
 get_reverse_location_soap.js,https://raw.githubusercontent.com/ServiceObjects/address-geocode-us/master/address-geocode-us-nodejs/SOAP/get_reverse_location_soap.js

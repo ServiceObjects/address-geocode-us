@@ -23,7 +23,7 @@ def get_distance_to_water_soap_sdk_go(is_live: bool, license_key: str) -> None:
     print(f"Timeout Seconds : {timeout_seconds}")
 
     try:
-        service = GetDistanceToWaterSoap(latitude,longitude,license_key,is_live,timeout_seconds)
+        service = GetDistanceToWaterSoap(latitude, longitude, license_key, is_live, timeout_seconds)
         response = service.get_distance_to_water()
 
         if response and not hasattr(response, "Error"):

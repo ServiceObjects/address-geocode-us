@@ -22,15 +22,15 @@ The operation output is designed to allow the service to return new pieces of da
 // 1. Build the input
 //
 //  Required fields:
-//               City 
-//               State
-//               PostalCode
-//               LicenseKey
-//               IsLive
+//               address
+//               city 
+//               state
+//               postalCode
+//               licenseKey
+//               isLive
 // 
 // Optional:
-//        Address
-//        TimeoutSeconds (default: 15)
+//        timeoutSeconds
 
 import { GetBestMatchV4Soap } from "../address-geocode-us-nodejs/SOAP/get_best_match_v4_soap.js";
 
@@ -39,6 +39,8 @@ const city = "Santa Barbara";
 const state = "CA";
 const postalCode = "93101";
 const timeoutSeconds = 15;
+const isLive = true;
+const licenseKey = "YOUR LICENSE KEY";
 
 // 2. Call the sync InvokeAsync() method.
 const agus = new GetBestMatchV4Soap(address, city, state, postalCode, licenseKey, isLive, timeoutSeconds);
@@ -55,9 +57,11 @@ if (response)
     console.log(`Zip              : ${response.Zip}`);
 
     console.log("\n* Information Components *\n");
-    if (response?.InformationComponents.length > 0)
+    if (response?.InformationComponents.InformationComponent.length > 0)
     {
-        response.InformationComponents.forEach((component, index) => {
+        const raw = response?.InformationComponents?.InformationComponent;
+        const components = Array.from(raw ?? []);
+        components.forEach((component, index) => {
             console.log(`${component.Name}: ${component.Value}`);
         });
     }
@@ -92,19 +96,21 @@ Returns an estimated distance from a given latitude and longitude to the nearest
 // 1. Build the input
 //
 //  Required fields:
-//               Latitude
-//               Longitude
-//               LicenseKey
-//               IsLive
+//               latitude
+//               longitude
+//               licenseKey
+//               isLive
 // 
 // Optional:
-//        TimeoutSeconds (default: 15)
+//        timeoutSeconds
 
 import { GetDistanceToWaterClient } from "../address-geocode-us-nodejs/REST/get_distance_to_water_rest.js";
 
 const latitude = "34.419120";
 const longitude = "-119.703421";
 const timeoutSeconds = 15;
+const isLive = true;
+const licenseKey = "YOUR LICENSE KEY";
 
 // 2. Call the sync InvokeAsync() method.
 const agus = new GetDistanceToWaterSoap(latitude, longitude, licenseKey, isLive, timeoutSeconds);
@@ -147,19 +153,21 @@ Returns an estimated address for a given latitude and longitude.
 // 1. Build the input
 //
 //  Required fields:
-//               Latitude
-//               Longitude
-//               LicenseKey
-//               IsLive
+//               latitude
+//               longitude
+//               licenseKey
+//               isLive
 // 
 // Optional:
-//        TimeoutSeconds (default: 15)
+//        timeoutSeconds
 
 import { GetReverseLocationSoap } from "../address-geocode-us-nodejs/SOAP/get_reverse_location_soap.js";
 
 const latitude = "34.419120";
 const longitude = "-119.703421";
 const timeoutSeconds = 15;
+const isLive = true;
+const licenseKey = "YOUR LICENSE KEY";
 
 // 2. Call the sync InvokeAsync() method.
 const agus = new GetReverseLocationSoap(latitude, longitude, licenseKey, isLive, timeoutSeconds);

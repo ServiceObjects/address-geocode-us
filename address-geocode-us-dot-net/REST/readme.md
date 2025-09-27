@@ -22,6 +22,7 @@ The operation output is designed to allow the service to return new pieces of da
 # 1. Build the input
 #
 #  Required fields:
+#               Address
 #               City 
 #               State
 #               PostalCode
@@ -29,8 +30,7 @@ The operation output is designed to allow the service to return new pieces of da
 #               IsLive
 # 
 # Optional:
-#        Address
-#        TimeoutSeconds (default: 15)
+#        TimeoutSeconds
 
 using address_geocode_us_dot_net.REST;
 
@@ -40,7 +40,7 @@ GetBestMatchV4Client.GetBestMatchV4Input getBestMatchV4Input = new(
     State: "CA",
     PostalCode: "93101",
     LicenseKey: licenseKey,
-    IsLive: isLive,
+    IsLive: true,
     TimeoutSeconds: 15
 );
 
@@ -97,15 +97,15 @@ Returns an estimated distance from a given latitude and longitude to the nearest
 //               IsLive
 // 
 // Optional:
-//        TimeoutSeconds (default: 15)
+//        TimeoutSeconds
 
 using address_geocode_us_dot_net.REST;
 
 GetDistanceToWaterClient.GetDistanceToWaterInput getDistanceToWaterInput = new(
     Latitude: "34.419120",
     Longitude: "-119.703421",
-    LicenseKey: licenseKey,
-    IsLive: isLive,
+    LicenseKey: LicenseKey,
+    IsLive: true,
     TimeoutSeconds: 15
 );
 
@@ -149,7 +149,7 @@ Returns an estimated address for a given latitude and longitude.
 //               IsLive
 // 
 // Optional:
-//        TimeoutSeconds (default: 15)
+//        TimeoutSeconds
 
 using address_geocode_us_dot_net.REST;
 
@@ -157,7 +157,7 @@ GetReverseLocationClient.GetReverseLocationInput getReverseLocationInput = new(
     Latitude: "34.419061",
     Longitude: "-119.702139",
     LicenseKey: licenseKey,
-    IsLive: isLive,
+    IsLive: true,
     TimeoutSeconds: 15
 );
 

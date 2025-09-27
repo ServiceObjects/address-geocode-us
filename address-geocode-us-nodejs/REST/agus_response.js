@@ -1,8 +1,8 @@
 export class GetDistanceToWaterInput {
     constructor(data = {}) {
-        this.Latitude = data.Latitude || null;
-        this.Longitude = data.Longitude || null;
-        this.LicenseKey = data.LicenseKey || null;
+        this.Latitude = data.Latitude;
+        this.Longitude = data.Longitude;
+        this.LicenseKey = data.LicenseKey;
         this.IsLive = data.IsLive !== undefined ? data.IsLive : true;
         this.TimeoutSeconds = data.TimeoutSeconds !== undefined ? data.TimeoutSeconds : 15;
     }
@@ -17,8 +17,8 @@ export class GetDistanceToWaterInput {
  */
 export class InformationComponent {
     constructor(data = {}) {
-        this.Name = data.Name || null;
-        this.Value = data.Value || null;
+        this.Name = data.Name;
+        this.Value = data.Value;
     }
 
     toString() {
@@ -31,9 +31,9 @@ export class InformationComponent {
  */
 export class Error {
     constructor(data = {}) {
-        this.Desc = data.Desc || null;
-        this.Number = data.Number || null;
-        this.Location = data.Location || null;
+        this.Desc = data.Desc;
+        this.Number = data.Number;
+        this.Location = data.Location;
     }
 
     toString() {
@@ -46,11 +46,11 @@ export class Error {
  */
 export class GetBestMatchV4Response {
     constructor(data = {}) {
-        this.Level = data.Level || null;
-        this.LevelDescription = data.LevelDescription || null;
-        this.Latitude = data.Latitude || null;
-        this.Longitude = data.Longitude || null;
-        this.Zip = data.Zip || null;
+        this.Level = data.Level;
+        this.LevelDescription = data.LevelDescription;
+        this.Latitude = data.Latitude;
+        this.Longitude = data.Longitude;
+        this.Zip = data.Zip;
         this.InformationComponents = (data.InformationComponents || []).map(component => new InformationComponent(component));
         this.Error = data.Error ? new Error(data.Error) : null;
     }
@@ -69,11 +69,11 @@ export class GetBestMatchV4Response {
  */
 export class GetDistanceToWaterResponse {
     constructor(data = {}) {
-        this.DistanceToWater = data.DistanceToWater || null;
-        this.Latitude = data.Latitude || null;
-        this.Longitude = data.Longitude || null;
-        this.WaterLat = data.WaterLat || null;
-        this.WaterLon = data.WaterLon || null;
+        this.DistanceToWater = data.DistanceToWater;
+        this.Latitude = data.Latitude;
+        this.Longitude = data.Longitude;
+        this.WaterLat = data.WaterLat;
+        this.WaterLon = data.WaterLon;
         this.Error = data.Error ? new Error(data.Error) : null;
     }
 
@@ -88,11 +88,11 @@ export class GetDistanceToWaterResponse {
  */
 export class GetReverseLocationResponse {
     constructor(data = {}) {
-        this.Address = data.Address || null;
-        this.City = data.City || null;
-        this.State = data.State || null;
-        this.Zip = data.Zip || null;
-        this.County = data.County || null;
+        this.Address = data.Address;
+        this.City = data.City;
+        this.State = data.State;
+        this.Zip = data.Zip;
+        this.County = data.County;
         this.Error = data.Error ? new Error(data.Error) : null;
     }
 
